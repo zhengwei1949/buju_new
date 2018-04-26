@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>比价搜索分类页面</title>
+    <link rel="stylesheet" href="lib/fa/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/category.css">
+</head>
+<body>
+
+<div class="mmb_container">
+    
+    <!--头部-->
+    <div class="header">
+        <div class="header_logo fl"></div>
+        <div class="header_app fr"></div>
+    </div>
+    
+    <!--搜索-->
+    <div class="search">
+        <input type="text" placeholder="请输入你想比价的商品">
+        <button>搜索</button>
+    </div>
+    
+    <!--内容-->
+    <div class="content">
+        <!--dig-->
+    </div>
+    
+    <!--底部-->
+    <div class="footer">
+        <div class="back clearfix">
+            <a class="">登录</a>
+            <a class="">注册</a>
+            <a class="fa fa-arrow-up">返回顶部</a>
+        </div>
+        <div class="mapp">
+            <a href="">手机APP下载 慢慢买手机版</a> --掌上比价平台
+            <div class="domain">www.mmbuy.com</div>
+        </div>
+    </div>
+
+</div>
+
+<!--分类标题模板-->
+<script type="text/html" id="titleTpl">
+    {{each result v i}}
+    <div class="item" data-id="{{v.titleId}}">
+        <div class="title"><span>{{v.title}}</span><span class="arrowList fa fa-angle-down"></span></div>
+    </div>
+    <div class="list">
+        <ul class="clearfix">
+            <!--dig-->
+        </ul>
+    </div>
+    {{/each}}
+</script>
+
+<script type="text/html" id="categoryTpl">
+
+    {{each result v i}}
+    <li><a href="product.html?categoryid={{v.categoryId}}">{{v.category}}</a></li>
+    {{/each}}
+
+</script>
+
+<script src="lib/zepto/zepto.min.js"></script>
+<script src="js/utils.js"></script>
+<script src="lib/artTemplate/template-web.js"></script>
+<script src="js/category.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,115 @@
+@charset "UTF-8";
+.header {
+  background-color: #ff841d;
+  text-align: center;
+  color: #fff;
+}
+.header a {
+  color: #fff;
+  height: 1.36rem;
+  line-height: 1.36rem;
+}
+.couponproduct-content {
+  width: 100%;
+  position: relative;
+}
+.couponproduct-content .tab {
+  height: 1.44rem;
+  border-bottom: 2px solid #dadada;
+  position: relative;
+  z-index: 999;
+}
+.couponproduct-content .tab > ul {
+  width: 85%;
+}
+.couponproduct-content .tab li {
+  float: left;
+  width: 33.33%;
+  height: 1.44rem;
+  line-height: 1.44rem;
+  text-align: center;
+  font-size: 0.36rem;
+}
+.couponproduct-content .tab li .slice {
+  width: 0.4rem;
+}
+.couponproduct-content .tab span.search {
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 15%;
+  height: 1.36rem;
+  line-height: 0.36rem;
+  font-size: 0.4rem;
+  text-align: center;
+  color: #ccc;
+}
+.couponproduct-content .list {
+  width: 100%;
+  position: absolute;
+  background-color: #fff;
+  z-index: 999;
+}
+.couponproduct-content .list a {
+  display: block;
+  width: 100%;
+  height: 1.44rem;
+  line-height: 1.44rem;
+  font-size: 0.36rem;
+  border-bottom: 1px solid #ccc;
+  padding: 0 0.4rem;
+}
+.couponproduct-content .list a > b {
+  font-weight: normal;
+}
+.couponproduct-content .list a > span {
+  height: 1.44rem;
+  color: #ff841d;
+  line-height: 1.44rem;
+  visibility: hidden;
+}
+.couponproduct-content .list a.active > span {
+  visibility: visible;
+}
+.couponproduct-content .list.hide {
+  display: none;
+}
+.couponproduct-content .gsproduct-info {
+  background-color: #f1f1f1;
+  padding: 0.4rem;
+}
+.couponproduct-content .gsproduct-info li {
+  width: 48%;
+  background-color: #fff;
+  height: 9.6rem;
+  padding: 0.2rem;
+  position: relative;
+  float: left;
+  margin-bottom: 0.4rem;
+}
+.couponproduct-content .gsproduct-info li:nth-child(odd) {
+  margin-right: 2%;
+}
+.couponproduct-content .gsproduct-info img {
+  display: block;
+  width: 100%;
+}
+.couponproduct-content .gsproduct-info p {
+  margin-top: 0.2rem;
+  font-size: 0.32rem;
+}
+.couponproduct-content .gsproduct-info .addCart {
+  display: block;
+  width: 2.4rem;
+  height: 1rem;
+  line-height: 1rem;
+  background-color: #ff841d;
+  color: #fff;
+  font-size: 0.32rem;
+  text-align: center;
+  position: absolute;
+  right: 0.4rem;
+  bottom: 0;
+  border-radius: 0.1rem;
+}

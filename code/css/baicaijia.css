@@ -1,0 +1,170 @@
+@charset "UTF-8";
+.bcj-content {
+  position: relative;
+}
+.header {
+  background-color: #f4483e;
+}
+.bcj-title {
+  height: 1.5rem;
+  width: 100%;
+  overflow: hidden;
+  background-color: #fff;
+  border-bottom: 2px solid #ccc;
+}
+.bcj-title ul {
+  width: 2000px;
+}
+.bcj-title ul li {
+  float: left;
+  height: 1.5rem;
+  line-height: 1.5rem;
+  font-size: 0.36rem;
+  padding: 0 0.2rem;
+}
+.bcj-title ul a {
+  display: block;
+  height: 1.46rem;
+  border-bottom: 3px solid transparent;
+}
+.bcj-title ul a.active {
+  border-bottom: 3px solid #e4393c;
+  color: #e4393c;
+}
+.searchBtn {
+  width: 1.5rem;
+  height: 1.46rem;
+  line-height: 1.46rem;
+  background-color: #efefef;
+  border-left: 1px solid #e6e6e6;
+  text-align: center;
+  color: #ccc;
+  font-size: 0.6rem;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 999;
+}
+.bcjList {
+  width: 100%;
+}
+.bcjList ul li {
+  height: 6rem;
+  background-color: #fff;
+  border-top: 2px solid #ccc;
+  padding: 0.4rem 0.2rem;
+}
+.bcjList ul .productImg,
+.bcjList ul .productImg img {
+  display: block;
+  width: 5.2rem;
+  height: 5.2rem;
+  margin-right: 0.2rem;
+  float: left;
+}
+.bcjList ul .info {
+  overflow: hidden;
+  height: 100%;
+  position: relative;
+}
+.bcjList ul p.num,
+.bcjList ul .bar {
+  height: 0.6rem;
+  line-height: 0.6rem;
+  margin-top: 0.6rem;
+  padding-left: 0.4rem;
+}
+.bcjList ul p.num i,
+.bcjList ul .bar i {
+  display: block;
+  float: left;
+  width: 3.3rem;
+  height: 0.6rem;
+  border-radius: 0.3rem;
+  background-color: #ffb7b7;
+  margin-right: 0.4rem;
+  text-align: center;
+  font-size: 0.2rem;
+  color: #fff;
+  border: 1px solid red;
+}
+.bcjList ul p.num b,
+.bcjList ul .bar b {
+  display: block;
+  float: left;
+  font-size: 0.24rem;
+  font-weight: normal;
+  color: red;
+  height: 0.6rem;
+  line-height: 0.6rem;
+}
+.bcjList ul .left {
+  display: block;
+  float: left;
+  width: 3.3rem;
+  height: 0.6rem;
+  border-radius: 0.3rem;
+  background-color: #ffb7b7;
+  margin-right: 0.4rem;
+}
+.bcjList ul p.price {
+  margin-top: 0.2rem;
+  color: red;
+}
+.bcjList ul p.price del {
+  margin-left: 0.2rem;
+  color: #ccc;
+  font-size: 0.4rem;
+}
+.bcjList ul p.price em {
+  margin-left: 0.2rem;
+  margin-right: 0.1rem;
+  font-size: 0.4rem;
+  font-style: normal;
+}
+.bcjList ul .info a:first-of-type {
+  display: block;
+  width: 4.2rem;
+  height: 0.92rem;
+  line-height: 0.92rem;
+  border: 1px dashed red;
+  color: red;
+  font-size: 0.32rem;
+  margin-left: 0.4rem;
+  position: absolute;
+  bottom: 0;
+  text-align: center;
+}
+.bcjList ul .info a:last-of-type {
+  display: block;
+  width: 2.2rem;
+  height: 0.92rem;
+  line-height: 0.92rem;
+  border-radius: 0.1rem;
+  background-color: #ff5e5d;
+  text-align: center;
+  color: #fff;
+  font-size: 0.32rem;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+.backTop {
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  z-index: 999;
+  bottom: 0.2rem;
+  right: 0.2rem;
+}
+.backTop span.fa-arrow-up {
+  display: block;
+  width: 100%;
+  height: 100%;
+  line-height: 1rem;
+  padding-left: 0.24rem;
+  font-size: 0.52rem;
+  color: rgba(255, 255, 255, 0.6);
+}

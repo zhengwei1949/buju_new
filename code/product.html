@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>商品列表</title>
+    <link rel="stylesheet" href="lib/fa/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/category.css">
+    <link rel="stylesheet" href="css/product.css">
+</head>
+<body>
+
+<div class="mmb_container">
+    
+    <!--头部-->
+    <div class="header">
+        <div class="header_logo fl"></div>
+        <div class="header_app fr"></div>
+    </div>
+    
+    <!--搜索-->
+    <div class="search">
+        <input type="text" placeholder="请输入你想比价的商品">
+        <button>搜索</button>
+    </div>
+    
+    <!--内容-->
+    <div class="content">
+        <!--三级菜单-->
+        <div class="product_title clearfix">
+            <!--dig-->
+        </div>
+        
+        <!--商品列表-->
+        <div class="product_info">
+            
+            <ul>
+                <!--dig-->
+            </ul>
+        
+        </div>
+        
+        <!--分页-->
+        <div class="product_page">
+            <!--dig-->
+        </div>
+    
+    </div>
+    
+    <!--底部-->
+    <div class="footer">
+        <div class="back clearfix">
+            <a class="">登录</a>
+            <a class="">注册</a>
+            <a class="fa fa-arrow-up">返回顶部</a>
+        </div>
+        <div class="mapp">
+            <a href="">手机APP下载 慢慢买手机版</a> --掌上比价平台
+            <div class="domain">www.mmbuy.com</div>
+        </div>
+    </div>
+
+</div>
+
+<!--分类名称-->
+<script type="text/html" id="titleTpl">
+    
+    <div class="left fl">
+        <a href="index.html">首页&gt;</a>
+        <a href="category.html">全部分类&gt;</a>
+        <a href="product.html?categoryid={{result[0].categoryId}}">{{result[0].category}}&gt;</a>
+    </div>
+    <button class="fr">筛选</button>
+
+</script>
+
+<!--商品列表-->
+<script type="text/html" id="productTpl">
+    {{each result v i}}
+    <li class="clearfix">
+        <a href="productDetail.html?productid={{v.productId}}" class="left fl"><%- v.productImg%></a>
+        <div class="right">
+            <p>{{v.productName}}</p>
+            <p class="price">{{v.productPrice}}</p><span>{{v.productQuote}}&nbsp;{{v.productCom}}</span>
+        </div>
+    </li>
+    {{/each}}
+</script>
+
+<!--分页-->
+<script type="text/html" id="pageTpl">
+    
+    <span class="page"><a href="">上一页</a></span>
+    <span class="page">
+                <select>
+                    {{each result v i}}
+                        <option value="{{i+1}}">{{i+1}}/{{pagesize}}</option>
+                    {{/each}}
+                </select>
+            </span>
+    <span class="page"><a href="">下一页</a></span>
+
+</script>
+
+<script src="lib/zepto/zepto.min.js"></script>
+<script src="js/utils.js"></script>
+<script src="lib/artTemplate/template-web.js"></script>
+<script src="js/product.js"></script>
+</body>
+</html>

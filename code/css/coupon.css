@@ -1,0 +1,36 @@
+@charset "UTF-8";
+.header {
+  background-color: #f4483e;
+  text-align: center;
+  color: #fff;
+}
+.header a {
+  color: #fff;
+  height: 1.36rem;
+  line-height: 1.36rem;
+}
+.title {
+  width: 100%;
+  padding: 0.5rem 0.2rem;
+}
+.title li {
+  width: 32%;
+  float: left;
+  height: 3rem;
+  border: 1px solid #ccc;
+  background-color: #fff;
+  padding: 0.2rem 1.2rem;
+  margin-right: 1.33%;
+  margin-bottom: 0.2rem;
+}
+.title img {
+  display: block;
+  width: 100%;
+  height: 80%;
+  margin: 0 auto;
+}
+.title p {
+  font-size: 0.32rem;
+  text-align: center;
+  margin-top: 0.12rem;
+}

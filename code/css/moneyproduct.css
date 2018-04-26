@@ -1,0 +1,96 @@
+@charset "UTF-8";
+.mmb_container > .header {
+  font-size: 0.6rem;
+  font-weight: bold;
+  color: #fff;
+  text-align: center;
+  vertical-align: middle;
+}
+.mmb_container > .header .fa-angle-left {
+  display: block;
+  font-size: 0.6rem;
+  height: 1.4rem;
+  line-height: 1.4rem;
+  color: #fff;
+}
+.money-detail {
+  padding: 0.4rem;
+}
+.money-detail p {
+  font-size: 0.52rem;
+}
+.money-detail p.price {
+  color: red;
+}
+.money-detail .from {
+  margin-top: 0.4rem;
+  color: #666;
+}
+.money-detail .intro {
+  margin-top: 0.4rem;
+}
+.money-detail .intro img {
+  display: block;
+  float: right;
+  width: 4rem;
+}
+.money-detail .lgImg {
+  height: 9.6rem;
+  margin-top: 0.4rem;
+  text-align: center;
+}
+.money-detail .lgImg img {
+  display: block;
+  width: 33.33%;
+  margin: 0 auto;
+}
+a.goBuy {
+  display: block;
+  height: 1.2rem;
+  line-height: 1.2rem;
+  margin: 0.6rem 0.2rem;
+  border-radius: 0.2rem;
+  background-color: #ff9000;
+  text-align: center;
+  font-size: 0.52rem;
+  color: #fff;
+}
+.qrcode {
+  width: 100%;
+  margin-bottom: 0.4rem;
+}
+.qrcode img {
+  display: block;
+  width: 95%;
+  margin: 0 auto;
+}
+p {
+  padding-left: 0.4rem;
+  font-size: 0.6rem;
+}
+.comm {
+  height: 4.4rem;
+  margin: 0.4rem;
+  border: 1px solid #ccc;
+}
+.comm .input {
+  height: 3rem;
+  background-color: #fff;
+  border-bottom: 1px solid #ccc;
+}
+.pushComm {
+  height: 1.4rem;
+  line-height: 1.4rem;
+  background-color: #fbfbfb;
+  border-bottom: 1px solid #ccc;
+}
+.pushComm a {
+  display: block;
+  height: 100%;
+  width: 25%;
+  float: right;
+  color: #fff;
+  background-color: #ff841d;
+  font-size: 0.52rem;
+  text-align: center;
+}

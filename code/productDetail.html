@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>商品列表</title>
+    <link rel="stylesheet" href="lib/fa/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/category.css">
+    <link rel="stylesheet" href="css/product.css">
+    <link rel="stylesheet" href="css/productDetail.css">
+</head>
+<body>
+
+<div class="mmb_container">
+    
+    <!--头部-->
+    <div class="header">
+        <div class="header_logo fl"></div>
+        <div class="header_app fr"></div>
+    </div>
+    
+    <!--搜索-->
+    <div class="search">
+        <input type="text" placeholder="请输入你想比价的商品">
+        <button>搜索</button>
+    </div>
+    
+    <!--内容-->
+    <div class="content">
+        <!--三级菜单-->
+        <div class="product_title clearfix">
+            <!--dig-->
+        </div>
+        
+        <!--商品详情内容区域-->
+        <div class="detail">
+            <!--dig-->
+        </div>
+        
+        <!--评论-->
+        <div class="comment-title">
+            网友评价
+        </div>
+        <div class="comment-list">
+            <ul>
+                <!--dig-->
+            </ul>
+        </div>
+        
+        <!--查看更多评论-->
+        <div class="moreComm"><a href="">查看更多评价</a></div>
+        
+        <!--底部-->
+        <div class="footer">
+            <div class="back clearfix">
+                <a class="">登录</a>
+                <a class="">注册</a>
+                <a class="fa fa-arrow-up">返回顶部</a>
+            </div>
+            <div class="mapp">
+                <a href="">手机APP下载 慢慢买手机版</a> --掌上比价平台
+                <div class="domain">www.mmbuy.com</div>
+            </div>
+        </div>
+    
+    </div>
+    
+    <!--分类名称-->
+    <script type="text/html" id="titleTpl">
+        
+        <div class="left fl">
+            <a href="index.html">首页&gt;</a>
+            <a href="category.html">全部分类&gt;</a>
+            <a href="productDetail.html?productid={{result[0].productId}}">{{result[0].productName}}&gt;</a>
+        </div>
+        <button class="fr">筛选</button>
+    
+    </script>
+    
+    <!--商品详情-->
+    <script type="text/html" id="detailTpl">
+        
+        {{each result v i}}
+        <div class="product-bijia">
+            <div class="product-title">{{v.productName}}</div>
+            <div class="product-img"><%- v.productImg%></div>
+            <div class="product-fav">
+                <a href="javascrip:;">111<img src="" alt=""></a>
+            </div>
+        </div>
+        
+        <div class="product-tab">
+            <ul class="clearfix">
+                <li><a href="">比价购买</a></li>
+                <li><a href="">产品参数</a></li>
+                <li><a href="">评论(666)</a></li>
+            </ul>
+        </div>
+        
+        <div class="product-order">
+            <div class="title">
+                <div class="left">Youtube</div>
+                <div class="right"><span class="price">1999.00</span>&nbsp;<a href="">去购买</a></div>
+            </div>
+            <div class="note">* 实际价格以各网站列出的实时售价为准，我们提供的价格可能有数小时至数日的延迟。</div>
+        </div>
+        {{/each}}
+        
+    </script>
+    
+    <!--商品评论-->
+    <script type="text/html" id="comTpl">
+        {{each result v i}}
+        <li>
+            <div class="clearfix">
+                <div class="user fl">{{v.comName}}</div>
+                <div class="com-time fr">{{v.comFrom}}</div>
+            </div>
+            <div class="from">{{comFrom}}</div>
+            <div>{{v.comContent}}</div>
+        </li>
+        {{/each}}
+    </script>
+    
+    <script src="lib/zepto/zepto.min.js"></script>
+    <script src="js/utils.js"></script>
+    <script src="lib/artTemplate/template-web.js"></script>
+    <script src="js/productDetail.js"></script>
+</body>
+</html>

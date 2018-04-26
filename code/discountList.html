@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>商品列表</title>
+    <link rel="stylesheet" href="lib/fa/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/category.css">
+    <link rel="stylesheet" href="css/product.css">
+    <link rel="stylesheet" href="css/moneyproduct.css">
+    <link rel="stylesheet" href="css/discountList.css">
+</head>
+<body>
+
+<div class="mmb_container">
+    
+    <!--头部-->
+    <div class="header">
+        <a href="javascript:history.go(-1);" class="fa fa-angle-left fl"></a>
+        国内折扣
+        <div class="header_app fr"></div>
+    </div>
+    
+    <!--内容-->
+    <div class="content discountList-content">
+        <ul class="clearfix">
+            <!--dig-->
+        </ul>
+    </div>
+    
+    <!--底部-->
+    <div class="footer">
+        <div class="back clearfix">
+            <a class="">登录</a>
+            <a class="">注册</a>
+            <a class="fa fa-arrow-up">返回顶部</a>
+        </div>
+        <div class="mapp">
+            <a href="">手机APP下载 慢慢买手机版</a> --掌上比价平台
+            <div class="domain">www.mmbuy.com</div>
+        </div>
+    </div>
+
+</div>
+
+<!--商品列表-->
+<script type="text/html" id="productTpl">
+    {{each result v i}}
+    <li class="clearfix">
+        <a class="aWrap clearfix" href="productDetail.html?productid={{v.productId}}">
+            <a href="moneyproduct.html?productid={{v.productId}}" class="left fl"><%- v.productImgSm%></a>
+            <div class="right">
+                <p>{{v.productName}}</p>
+                <p class="price">{{v.productPinkage}}</p><span>{{v.productFrom}}{{v.productTime}}&nbsp;{{v.productComCount}}</span>
+            </div>
+        </a>
+    </li>
+    {{/each}}
+</script>
+
+<!--分页-->
+<script type="text/html" id="pageTpl">
+    
+    <span class="page"><a href="">上一页</a></span>
+    <span class="page">
+                <select>
+                    {{each result v i}}
+                        <option value="{{i+1}}">{{i+1}}/{{pagesize}}</option>
+                    {{/each}}
+                </select>
+            </span>
+    <span class="page"><a href="">下一页</a></span>
+
+</script>
+
+<!--国内折扣商品详情-->
+<script type="text/html" id="moneyTpl">
+    {{each result v i}}
+    <div class="title">
+        <p>{{v.productName}}</p>
+        <p class="price">{{v.productPinkage}}</p>
+    </div>
+    <p class="from">{{v.productFrom}}{{v.productTime}}{{v.productTips}}</p>
+    <div class="intro clearfix">
+        <%- v.productImgSm%>
+        <p>{{v.productInfo}}{{v.productInfo}}</p>
+    </div>
+    <div class="lgImg">{{@v.productImgLg}}</div>
+    {{/each}}
+</script>
+
+<!---->
+<script type="text/html" id="discountListTpl">
+    {{each result v i}}
+    <li>
+        <a href="moneyproduct.html?productid={{v.productId}}">
+            <div class="top"><%- v.productImg%></div>
+            <p class="productName">{{v.productName}}</p>
+            <p class="price">{{v.productPrice}}</p>
+            <p class="from">{{v.productFrom}}| {{v.productTime}}</p>
+        </a>
+    </li>
+    {{/each}}
+</script>
+
+<script src="lib/zepto/zepto.min.js"></script>
+<script src="js/utils.js"></script>
+<script src="lib/artTemplate/template-web.js"></script>
+<script src="js/discountList.js"></script>
+</body>
+</html>

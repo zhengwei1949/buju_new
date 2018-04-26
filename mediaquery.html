@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    *{
+        margin:0;
+        padding:0;
+    }
+    .clearfix{overflow:hidden;_zoom:1;}
+    .box{
+        width:100%;
+    }
+    .inner{
+        width:25%;
+        height:100px;
+        float: left;
+    }
+    .inner:nth-child(1){
+        background:rgb(201, 11, 43);
+    }
+    .inner:nth-child(2){
+        background:rgb(14, 194, 170);
+    }
+    .inner:nth-child(3){
+        background:rgb(12, 43, 179);
+    }
+    .inner:nth-child(4){
+        background:rgb(119, 97, 102);
+    }
+    /*屏幕小于登于320px*/
+    @media screen and (max-width:320px){
+        .inner{
+            width:100%;
+        }
+    }
+    </style>
+</head>
+<body>
+    <div class="box clearfix">
+        <div class="inner"></div>
+        <div class="inner"></div>
+        <div class="inner"></div>
+        <div class="inner"></div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,253 @@
+@charset "UTF-8";
+.content .item {
+  width: 100%;
+  height: 1.6rem;
+  line-height: 1.6rem;
+  background-color: #ededed;
+  border-top: 1px solid #d2d2d2;
+  border-bottom: 1px solid #d2d2d2;
+  padding: 0.4rem;
+}
+.content .item .title {
+  width: 100%;
+  height: 1.6rem;
+}
+.content .item span {
+  height: 0.8rem;
+  line-height: 0.8rem;
+}
+.content .item span:first-child {
+  float: left;
+  font-size: 0.6rem;
+}
+.content .item span:last-child {
+  float: right;
+  color: #8f8f8f;
+  font-size: 0.6rem;
+}
+.content .item .secondList li {
+  width: 33%;
+  height: 1.6rem;
+  background-color: #f9f9f9;
+}
+.content .list {
+  background-color: #f9f9f9;
+  border-bottom: 2px solid #888;
+  display: none;
+}
+.content .list a {
+  color: #333;
+}
+.content .list li {
+  height: 1.6rem;
+  line-height: 1.6rem;
+  width: 33.33%;
+  float: left;
+  text-align: center;
+  background-color: #f9f9f9;
+  border-right: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  font-size: 0.4rem;
+}
+.home {
+  height: 1.6rem;
+  background: linear-gradient(#fff, #ebebeb);
+  margin-bottom: 0.4rem;
+  font-size: 0.32rem;
+  line-height: 1.6rem;
+  padding-left: 0.4rem;
+  border-top: 1px solid #ebebeb;
+  border-bottom: 1px solid #ccc;
+}
+.rank {
+  height: 1.6rem;
+  background-color: #eee;
+  margin: 0.4rem;
+  line-height: 1.6rem;
+  padding-left: 0.4rem;
+  border: 1px solid #ccc;
+  color: #874604;
+  font-size: 0.52rem;
+}
+.brand-content li:first-child {
+  border-top: 1px solid #e7e7e7;
+}
+.brand-content li {
+  height: 2.64rem;
+  padding: 0.4rem;
+  border-bottom: 1px solid #e7e7e7;
+  position: relative;
+}
+.brand-content span.top1 {
+  background-color: red;
+}
+.brand-content span.top2 {
+  background-color: orange;
+}
+.brand-content span.top3 {
+  background-color: green;
+}
+.brand-content span {
+  width: 0.8rem;
+  height: 0.8rem;
+  line-height: 0.8rem;
+  color: #fff;
+  background-color: #c8c8c8;
+  position: absolute;
+  font-size: 0.32rem;
+  font-weight: 700;
+  text-align: center;
+}
+.brand-content .info {
+  margin-left: 1.16rem;
+}
+.brand-content .info P {
+  font-size: 0.52rem;
+  margin-bottom: 0.4rem;
+}
+.brand-content .info p:last-child {
+  color: #c9c9c9;
+}
+.brand-content i {
+  position: absolute;
+  right: 0.4rem;
+  top: 1rem;
+  color: #c9c9c9;
+}
+.brand-content .sold-title,
+.brand-content .comment-title {
+  height: 1.6rem;
+  background-color: #eee;
+  margin: 0.4rem;
+  line-height: 1.6rem;
+  padding-left: 0.4rem;
+  border: 1px solid #ccc;
+  color: #874604;
+  font-size: 0.52rem;
+}
+.brand-content .product_info li {
+  padding: 0.4rem;
+  width: 100%;
+  height: 4.6rem;
+  background-color: #fff;
+  border-bottom: 2px solid #ccc;
+}
+.brand-content .product_info .aWrap {
+  display: block;
+  width: 100%;
+}
+.brand-content .product_info .left {
+  margin-right: 0.5rem;
+}
+.brand-content .product_info .right {
+  overflow: hidden;
+  position: relative;
+  height: 3.8rem;
+}
+.brand-content .product_info p {
+  font-size: 0.5rem;
+  color: #000;
+}
+.brand-content .product_info p.price {
+  color: red;
+  margin-top: 0.1rem;
+  height: 0.6rem;
+  line-height: 0.6rem;
+  position: relative;
+}
+.brand-content .product_info p.price span.five {
+  display: inline;
+  line-height: 0.6rem;
+  background-color: #fff;
+  color: orange;
+  font-size: 0.72rem;
+  font-weight: 700;
+  position: absolute;
+  right: 2.4rem;
+}
+.brand-content .product_info p.quote {
+  color: #a1a1a1;
+  margin-top: 0.4rem;
+}
+.brand-content .product_info span {
+  display: block;
+  height: 0.6rem;
+  font-size: 0.32rem;
+  color: #ccc;
+  margin-bottom: 0.2rem;
+}
+.brand-content .product_info img {
+  display: block;
+  height: 3.8rem;
+}
+.comment-list {
+  font-size: 0.24rem;
+}
+.comment-list .from {
+  text-align: right;
+}
+.comment-list li {
+  padding: 0.3rem 0.3rem 0;
+  border: 1px solid #e7e7e7;
+}
+.comment-list li div:last-child {
+  margin-top: 0.2rem;
+}
+.comment-list .comInfo {
+  border: 1px solid #ccc;
+  padding: 0.2rem;
+  background-color: #f8f8f8;
+  margin-bottom: 0.2rem;
+  font-size: 0.32rem;
+}
+.comment-list .comInfo span.five {
+  display: inline;
+  line-height: 0.6rem;
+  background-color: #f8f8f8;
+  color: orange;
+  font-size: 0.6rem;
+  font-weight: 700;
+  padding-left: 0.4rem;
+}
+.comment-list .commImg li {
+  padding: 0.4rem;
+  width: 100%;
+  height: 4.6rem;
+  background-color: #fff;
+  border-bottom: 2px solid #ccc;
+}
+.comment-list .commImg .aWrap {
+  display: block;
+  width: 100%;
+}
+.comment-list .commImg .left {
+  margin-right: 0.5rem;
+}
+.comment-list .commImg .right {
+  overflow: hidden;
+  position: relative;
+  height: 3.8rem;
+}
+.comment-list .commImg p {
+  font-size: 0.5rem;
+  color: #000;
+}
+.comment-list .commImg p.price {
+  color: red;
+  margin-top: 0.1rem;
+}
+.comment-list .commImg p.quote {
+  color: #a1a1a1;
+  margin-top: 0.4rem;
+}
+.comment-list .commImg span {
+  display: block;
+  height: 0.6rem;
+  font-size: 0.32rem;
+  color: #ccc;
+  margin-bottom: 0.2rem;
+}
+.comment-list .commImg img {
+  display: block;
+  height: 3.8rem;
+}

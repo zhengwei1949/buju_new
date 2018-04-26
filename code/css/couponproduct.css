@@ -1,0 +1,107 @@
+@charset "UTF-8";
+.header {
+  background-color: #f4483e;
+  text-align: center;
+  color: #fff;
+}
+.header a {
+  color: #fff;
+  height: 1.36rem;
+  line-height: 1.36rem;
+}
+.couponproduct-content .note {
+  font-size: 0.28rem;
+  color: #999;
+  text-align: center;
+  margin: 0.4rem 0;
+}
+.couponproduct-list li {
+  height: 6.2rem;
+  width: 100%;
+  padding: 0.4rem;
+  border-bottom: 1px solid #efefef;
+}
+.couponproduct-list li a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.couponproduct-list li span {
+  position: absolute;
+  right: 0;
+  bottom: 50%;
+  color: #eee;
+}
+.couponproduct-list .coupon-img {
+  float: left;
+  margin-right: 0.4rem;
+  text-align: center;
+}
+.couponproduct-list .coupon-img img {
+  display: block;
+  width: 4rem;
+  height: 3.32rem;
+}
+.couponproduct-list .coupon-info {
+  float: left;
+  width: 9.6rem;
+}
+.couponproduct-list .coupon-info p {
+  font-size: 0.32rem;
+}
+.couponproduct-list .coupon-info .productName {
+  margin-bottom: 0.2rem;
+}
+.couponproduct-list .coupon-info .price {
+  font-weight: 700;
+  margin-bottom: 0.52rem;
+}
+.couponproduct-list .coupon-info .productTime {
+  color: orange;
+}
+.mask {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  display: none;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.mask .layer ul {
+  transition: all 1s;
+}
+.mask .layer li {
+  float: left;
+}
+.mask .arrowL,
+.mask .arrowR {
+  position: absolute;
+  top: 9rem;
+  transform: translateY(-50%);
+  color: #ccc;
+  font-size: 1rem;
+}
+.mask .arrowL {
+  left: 2.4rem;
+}
+.mask .arrowR {
+  right: 2.4rem;
+}
+.mask .layer {
+  width: 8rem;
+  height: 6rem;
+  margin: 6rem auto 0;
+  position: relative;
+  overflow: hidden;
+}
+.mask .layer ul {
+  transition: all 1s;
+}
+.mask .layer img {
+  display: block;
+  margin: 0 auto;
+  width: 8rem;
+  height: 6rem;
+}

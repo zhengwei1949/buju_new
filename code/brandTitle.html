@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>比价搜索分类页面</title>
+    <link rel="stylesheet" href="lib/fa/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/brandTitle.css">
+</head>
+<body>
+
+<div class="mmb_container">
+    
+    <!--头部-->
+    <div class="header">
+        <div class="header_logo fl"></div>
+        <div class="header_app fr"></div>
+    </div>
+    
+    <!--搜索-->
+    <div class="search">
+        <input type="text" placeholder="请输入你想比价的商品">
+        <button>搜索</button>
+    </div>
+    
+    <!--首页>全部分类>  热门品牌排行-->
+    <div class="home"><a href="index.html">首页 &gt;</a><a href="category.html">全部分类 &gt;</a></div>
+    <div class="rank">热门品牌排行</div>
+    
+    <!--内容-->
+    <div class="content brandTitle-content">
+        <!--dig-->
+    </div>
+    
+    <!--底部-->
+    <div class="footer">
+        <div class="back clearfix">
+            <a class="">登录</a>
+            <a class="">注册</a>
+            <a class="fa fa-arrow-up">返回顶部</a>
+        </div>
+        <div class="mapp">
+            <a href="">手机APP下载 慢慢买手机版</a> --掌上比价平台
+            <div class="domain">www.mmbuy.com</div>
+        </div>
+    </div>
+
+</div>
+
+<script type="text/html" id="brandTitleTpl">
+    
+    {{each result v i}}
+    <div class="item" data-id="{{v.brandTitleId}}">
+        <a href="brand.html?brandtitleid={{v.brandTitleId}}"><div class="title"><span>{{v.brandTitle}}</span><span class="arrowList fa fa-angle-down"></span></div></a>
+    </div>
+    
+    <div class="list">
+        <ul class="clearfix">
+            <!--dig-->
+        </ul>
+    </div>
+    {{/each}}
+
+</script>
+
+<script src="lib/zepto/zepto.min.js"></script>
+<script src="js/utils.js"></script>
+<script src="lib/artTemplate/template-web.js"></script>
+<script src="js/brandTitle.js"></script>
+</body>
+</html>

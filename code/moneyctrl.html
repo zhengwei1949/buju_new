@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>商品列表</title>
+    <link rel="stylesheet" href="lib/fa/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/category.css">
+    <link rel="stylesheet" href="css/product.css">
+    <link rel="stylesheet" href="css/moneyctrl.css">
+</head>
+<body>
+
+<div class="mmb_container">
+    
+    <!--头部-->
+    <div class="header">
+        <a href="javascript:history.go(-1);" class="fa fa-angle-left fl"></a>
+        省钱控 - 最新优惠
+        <div class="header_app fr"></div>
+    </div>
+    
+    <!--内容-->
+    <div class="content">
+        
+        <!--商品列表-->
+        <div class="product_info">
+            <ul>
+                <!--dig-->
+            </ul>
+        </div>
+    
+        <!--分页-->
+        <div class="product_page">
+            <!--dig-->
+        </div>
+        
+    </div>
+    
+    <!--底部-->
+    <div class="footer">
+        <div class="back clearfix">
+            <a class="">登录</a>
+            <a class="">注册</a>
+            <a href="javascript:;" class="fa fa-arrow-up">返回顶部</a>
+        </div>
+        <div class="mapp">
+            <a href="">手机APP下载 慢慢买手机版</a> --掌上比价平台
+            <div class="domain">www.mmbuy.com</div>
+        </div>
+    </div>
+
+</div>
+
+<!--商品列表-->
+<script type="text/html" id="productTpl">
+    {{each result v i}}
+    <li class="clearfix">
+        <a  class="aWrap clearfix" href="productDetail.html?productid={{v.productId}}">
+            <a href="moneyproduct.html?productid={{v.productId}}" class="left fl"><%- v.productImgSm%></a>
+            <div class="right">
+                <p>{{v.productName}}</p>
+                <p class="price">{{v.productPinkage}}</p><span>{{v.productFrom}}{{v.productTime}}&nbsp;{{v.productComCount}}</span>
+            </div>
+        </a>
+    </li>
+    {{/each}}
+</script>
+
+<!--分页-->
+<script type="text/html" id="pageTpl">
+    
+    <span class="page prev"><a href="javascript:;">上一页</a></span>
+    <span class="page current">
+                <select>
+                    <% for(var i=1; i<=pageNum; i++){%>
+                        <option value="{{i}}">{{i}}页/{{pageNum}}页</option>
+                    <% } %>
+                </select>
+            </span>
+    <span class="page next"><a href="javascript:;">下一页</a></span>
+
+</script>
+
+<script src="lib/zepto/zepto.min.js"></script>
+<script src="js/utils.js"></script>
+<script src="lib/artTemplate/template-web.js"></script>
+<script src="js/moneyctrl.js"></script>
+</body>
+</html>

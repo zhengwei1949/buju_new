@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>慢慢买</title>
+    <link rel="stylesheet" href="lib/fa/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+
+<div class="mmb_container">
+    
+    <!--头部-->
+    <div class="header">
+        <div class="header_logo fl"></div>
+        <div class="header_app fr"></div>
+    </div>
+    
+    <!--搜索-->
+    <div class="search">
+        <input type="text" placeholder="请输入你想比价的商品">
+        <button>搜索</button>
+    </div>
+    
+    <!--内容-->
+    <div class="content">
+        
+        <div class="nav">
+            <ul class="clearfix">
+                <!--dig-->
+            </ul>
+        </div>
+        
+        <div class="recommended">
+            <span>超值折扣推荐</span>
+            <span class="fa fa-arrow-right fr"></span>
+        </div>
+        
+        <div class="product">
+            <ul>
+                <!--dig-->
+                <!--<li>-->
+                    <!--<div class="left"></div>-->
+                    <!--<div class="right">-->
+                        <!--<div class="title">-->
+                            <!--双十一必看： 天猫双11大促抢红包、购物补贴券 正式开启-->
+                            <!--<span>领天猫津贴 超级红包</span>-->
+                        <!--</div>-->
+                        <!--<div class="other clearfix">-->
+                            <!--<span class="mall fl">天猫商城| 11-06 20:00</span>-->
+                            <!--<span class="comment fa fa-commenting-o">1</span>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                <!--</li>-->
+            </ul>
+        </div>
+        
+        <div class="more">
+            <a href="javascrip:;">更多优惠信息 &gt;&gt; </a>
+        </div>
+    
+    </div>
+    
+    <!--底部-->
+    <div class="footer">
+        <div class="brand">品牌排行 <span class="fa fa-arrow-right fr"></span></div>
+        <div class="back clearfix">
+            <a class="">登录</a>
+            <a class="">注册</a>
+            <a class="fa fa-arrow-up">返回顶部</a>
+        </div>
+        <div class="mapp">
+            <a href="">手机APP下载 慢慢买手机版</a> --掌上比价平台
+            <div class="domain">www.mmbuy.com</div>
+        </div>
+    </div>
+
+</div>
+
+<!--nav渲染-->
+<script type="text/html" id="tpl">
+    {{each result v i}}
+    <li>
+        <a href="#">
+            <img src={{v.img}} alt="">
+            <p>{{v.name}}</p>
+        </a>
+    </li>
+    {{/each}}
+</script>
+
+<!--折扣列表渲染-->
+<script type="text/html" id="tpl2">
+    {{each result v i}}
+    <li>
+        <div class="left"><img src="{{v.productImgSm}}" alt=""></div>
+        <div class="right">
+            <div class="title">
+                {{v.productName}}
+                <span>{{v.productPinkage}}</span>
+            </div>
+            <div class="other clearfix">
+                <span class="mall fl">{{v.productFrom}}| {{v.productTime}}</span>
+                <span class="comment fa fa-commenting-o">{{v.productComCount}}</span>
+            </div>
+        </div>
+    </li>
+    {{/each}}
+</script>
+
+<!---->
+
+<script src="lib/zepto/zepto.min.js"></script>
+<script src="js/utils.js"></script>
+<script src="lib/artTemplate/template-web.js"></script>
+<script src="js/index.js"></script>
+
+</body>
+</html>

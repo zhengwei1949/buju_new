@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>肯德基优惠券</title>
+    <link rel="stylesheet" href="lib/fa/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/couponproduct.css">
+</head>
+<body>
+
+<div class="mmb_container">
+    
+    <!--头部-->
+    <div class="header">
+        <a href="javascript:history.go(-1);" class="fa fa-angle-left fl"></a>
+        肯德基优惠券
+        <div class="header_app fr"></div>
+    </div>
+    
+    <!--内容-->
+    <div class="content couponproduct-content">
+        
+        <div class="note">
+            --点餐前出示手机中的优惠券，即可享受优惠--
+        </div>
+        <!--list-->
+        <div class="couponproduct-list">
+            <ul class="clearfix">
+                <!--dig-->
+            </ul>
+        </div>
+    </div>
+    
+    <!--底部-->
+    <div class="footer">
+        <div class="back clearfix">
+            <a class="">登录</a>
+            <a class="">注册</a>
+            <a class="fa fa-arrow-up">返回顶部</a>
+        </div>
+        <div class="mapp">
+            <a href="">手机APP下载 慢慢买手机版</a> --掌上比价平台
+            <div class="domain">www.mmbuy.com</div>
+        </div>
+    </div>
+    
+    <!--mask遮罩层-->
+    <div class="mask">
+        <i class="arrowL fa fa-angle-left"></i>
+        <div class="layer">
+            <ul class="clearfix">
+                <!--dig-->
+            </ul>
+        </div>
+        <i class=" arrowR fa fa-angle-right"></i>
+    </div>
+    
+</div>
+
+
+<!--优惠券标题渲染-->
+<script type="text/html" id="couponTpl">
+    {{each result v i}}
+    <li><a class="javascript:;" href="couponproduct.html?couponid={{v.couponId}}"><img src="{{v.couponImg}}" alt=""><p>{{v.couponTitle}}</p></a></li>
+    {{/each}}
+</script>
+
+<!--优惠券列表渲染-->
+<script type="text/html" id="couponProductTpl">
+    {{each result v i}}
+    <li>
+        <a data-id="{{v.couponProductId}}" href="javascript:;" class="clearfix">
+            <div class="coupon-img"><%- v.couponProductImg%></div>
+            <div class="coupon-info">
+                <p class="productName">{{v.couponProductName}}</p>
+                <p class="price">{{v.couponProductPrice}}</p>
+                <p class="productTime">{{v.couponProductTime}}</p>
+            </div>
+            <span class="fa fa-angle-right"></span>
+        </a>
+    </li>
+    {{/each}}
+</script>
+
+<!--轮播图渲染-->
+<script type="text/html" id="sliderTpl">
+    {{each result v i}}
+        <li><a class="{{}}" href=""><%- v.couponProductImg%></a></li>
+    {{/each}}
+</script>
+
+
+<script src="lib/zepto/zepto.min.js"></script>
+<script src="js/utils.js"></script>
+<script src="lib/artTemplate/template-web.js"></script>
+<script src="lib/iscroll.js"></script>
+<script src="js/couponproduct.js"></script>
+</body>
+</html>

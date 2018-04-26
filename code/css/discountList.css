@@ -1,0 +1,28 @@
+@charset "UTF-8";
+.content.discountList-content ul > li {
+  float: left;
+  width: 50%;
+  height: 10.4rem;
+  padding: 0.6rem;
+  border: 1px solid #eeeeee;
+  position: relative;
+}
+.content.discountList-content ul > li .top > img {
+  display: block;
+  width: 6rem;
+  height: 5.6rem;
+}
+.content.discountList-content ul > li .productName {
+  font-size: 0.48rem;
+}
+.content.discountList-content ul > li .price {
+  font-size: 0.32rem;
+  color: red;
+}
+.content.discountList-content ul > li .from {
+  position: absolute;
+  bottom: 0.2rem;
+  margin-top: 0.4rem;
+  font-size: 0.28rem;
+  color: #ccc;
+}

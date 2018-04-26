@@ -1,0 +1,14 @@
+@charset "UTF-8";
+.mmb_container > .header {
+  font-size: 0.6rem;
+  color: #fff;
+  text-align: center;
+  vertical-align: middle;
+}
+.mmb_container > .header .fa-angle-left {
+  display: block;
+  font-size: 0.6rem;
+  height: 1.4rem;
+  line-height: 1.4rem;
+  color: #fff;
+}

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>优惠券</title>
+    <link rel="stylesheet" href="lib/fa/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/gsproduct.css">
+</head>
+<body>
+
+<div class="mmb_container">
+    
+    <!--头部-->
+    <div class="header">
+        <a href="javascript:history.go(-1);" class="fa fa-angle-left fl"></a>
+        凑单品
+        <div class="header_app fr"></div>
+    </div>
+    
+    <!--内容-->
+    <div class="content couponproduct-content">
+        
+        <div class="tab">
+            <ul class="clearfix">
+                <li data-id="1"><div class="title gsShop"><span>京东</span> <i class="fa fa-angle-up"></i></div></li>
+                <li data-id="2"><div class="title gsArea"><span class="slice">华北</span> <i class="fa fa-angle-up"></i></div></li>
+                <li data-id="3"><div class="title gsPrice">全部价格 <i class="fa fa-angle-up"></i></div></li>
+            </ul>
+            <span class="search fa fa-search"></span>
+        </div>
+        <div id="list1" class="list hide">
+            <!--dig-->
+        </div>
+        <div id="list2" class="list hide">
+            <!--dig-->
+        </div>
+        <div id="list3" class="list hide">
+            <a class="active" href="javascript:;" data-id="{{}}"><b>全部价格</b><span class="fa fa-check fr"></span></a>
+        </div>
+        
+        <div class="gsproduct-info">
+            <ul class="clearfix">
+                <!--dig-->
+            </ul>
+        </div>
+    </div>
+
+    <!--底部-->
+    <div class="footer">
+        <div class="back clearfix">
+            <a class="">登录</a>
+            <a class="">注册</a>
+            <a class="fa fa-arrow-up">返回顶部</a>
+        </div>
+        <div class="mapp">
+            <a href="">手机APP下载 慢慢买手机版</a> --掌上比价平台
+            <div class="domain">www.mmbuy.com</div>
+        </div>
+    </div>
+
+</div>
+
+<!--tab-->
+<script type="text/html" id="tabTpl">
+
+</script>
+
+<!--店铺-->
+<script type="text/html" id="shopTpl">
+    {{each result v i}}
+    <a class="{{i==0?'active':''}}" href="javascript:;" data-id="{{v.shopId}}"><b>{{v.shopName}}</b><span class="fa fa-check fr"></span></a>
+    {{/each}}
+</script>
+
+<!--区域-->
+<script type="text/html" id="areaTpl">
+    {{each result v i}}
+    <a class="{{i==0?'active':''}}" href="javascript:;" data-id="{{v.areaId}}"><b>{{v.areaName}}</b><span class="fa fa-check fr"></span></a>
+    {{/each}}
+</script>
+
+<!--全部价格-->
+<script type="text/html" id="priceTpl">
+    <a class="active" href="javascript:;" data-id="{{}}"><b>全部价格</b><span class="fa fa-check fr"></span></a>
+</script>
+
+<!--凑单商品列表-->
+<script type="text/html" id="gsTpl">
+    {{each result v i}}
+    <li>
+        <a href=""><img src="{{v.productImg}}" alt=""></a>
+        <p class="gsName">{{v.productName}}</p>
+        <p class="price">{{v.productPrice}} <a href="javascript:;" class="addCart">去凑单</a></p>
+    </li>
+    {{/each}}
+</script>
+
+<script src="lib/zepto/zepto.min.js"></script>
+<script src="js/utils.js"></script>
+<script src="lib/artTemplate/template-web.js"></script>
+<script src="lib/iscroll.js"></script>
+<script src="js/gsproduct.js"></script>
+</body>
+</html>

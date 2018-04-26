@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>白菜价</title>
+    <link rel="stylesheet" href="lib/fa/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/coupon.css">
+</head>
+<body>
+
+<div class="mmb_container">
+    
+    <!--头部-->
+    <div class="header">
+        <a href="javascript:history.go(-1);" class="fa fa-angle-left fl"></a>
+        优惠券
+        <div class="header_app fr"></div>
+    </div>
+    
+    <!--内容-->
+    <div class="content coupon-content">
+        <div class="title">
+            <ul class="clearfix">
+                <!--dig-->
+            </ul>
+        </div>
+    </div>
+    
+    <!--底部-->
+    <div class="footer">
+        <div class="back clearfix">
+            <a class="">登录</a>
+            <a class="">注册</a>
+            <a class="fa fa-arrow-up">返回顶部</a>
+        </div>
+        <div class="mapp">
+            <a href="">手机APP下载 慢慢买手机版</a> --掌上比价平台
+            <div class="domain">www.mmbuy.com</div>
+        </div>
+    </div>
+
+</div>
+
+<!--白菜价标题tab模板-->
+<script type="text/html" id="titleTpl">
+    {{each result v i}}
+    <li data-id={{v.titleId}}><a href="javascript:;" class="{{i===0?'active':''}}">{{v.title}}</a></li>
+    {{/each}}
+</script>
+
+<!--白菜价列表list模板-->
+<script type="text/html" id="listTpl">
+    {{each result v i}}
+    <li class="clearfix">
+        <a href="" class="productImg"><%- v.productImg%></a>
+        <div class="info">
+            <p class="name"><%- v.productName%></p>
+            <p class="price"><%- v.productPrice%></p>
+            <!--<p class="num">-->
+            <!--<span class="left">-->
+            <!--<i></i>-->
+            <!--</span>-->
+            <!--&lt;!&ndash;<span class="get">已领1000张</span>&ndash;&gt;-->
+            <!--<%- v.productCouponRemain%>-->
+            <!--</p>-->
+            <%- v.productCouponRemain%>
+            <%- v.productCoupon%>
+            <%- v.productHref%>
+            <!--<a href="{{v.productCoupon}}" class="bonus">点击领取优惠券</a>-->
+            <!--<a href="" class="orderLink">下单链接</a>-->
+        </div>
+    </li>
+    {{/each}}
+</script>
+
+<script type="text/html" id="couponTpl">
+    {{each result v i}}
+    <li><a href="couponproduct.html?couponid={{v.couponId}}"><img src="{{v.couponImg}}" alt=""><p>{{v.couponTitle}}</p></a></li>
+    {{/each}}
+</script>
+
+<script src="lib/zepto/zepto.min.js"></script>
+<script src="js/utils.js"></script>
+<script src="lib/artTemplate/template-web.js"></script>
+<script src="lib/iscroll.js"></script>
+<script src="js/coupon.js"></script>
+</body>
+</html>
