@@ -304,3 +304,6 @@ rem布局的缺点
     + 最新方案：https://www.w3cplus.com/css/vw-for-layout.html(了解即可)
 
 
+## 参考资料
+- https://github.com/zhengwei1949/buju
+- https://github.com/zhengwei1949/mmb_template
